@@ -1,3 +1,4 @@
+<?php include_once("add.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -101,39 +102,22 @@
 						</div>
 					</div>
 					<div class="grid_6 prefix_1">
-						<h3>Contact Form</h3>
-						<form id="form">
-							<div class="success_wrapper">
-								<div class="success-message">Contact form submitted</div>
-							</div>
-							<label class="name">
-								<input type="text" placeholder="Name:" data-constraints="@Required @JustLetters" />
-								<span class="empty-message">*This field is required.</span>
-								<span class="error-message">*This is not a valid name.</span>
-							</label>
-							<label class="email">
-								<input type="text" placeholder="E-mail:" data-constraints="@Required @Email" />
-								<span class="empty-message">*This field is required.</span>
-								<span class="error-message">*This is not a valid email.</span>
-							</label>
-							<label class="phone">
-								<input type="text" placeholder="Phone:" data-constraints="@Required @JustNumbers"/>
-								<span class="empty-message">*This field is required.</span>
-								<span class="error-message">*This is not a valid phone.</span>
-							</label>
-							<label class="message">
-								<textarea placeholder="Message:" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
-								<span class="empty-message">*This field is required.</span>
-								<span class="error-message">*The message is too short.</span>
-							</label>
-							<div>
-								<div class="clear"></div>
-								<div class="btns">
-									<a href="#" data-type="submit" class="btn">Send</a>
-									<a href="#" data-type="reset" class="btn">Clear</a>
-								</div>
-							</div>
-						</form>
+					<h3>Feel free to contact us</h3>
+						<div class="container">
+						  <form id="bookingForm">
+						    <label for="fname">Name</label>
+						    <input type="text" id="fname" name="Name" placeholder="Your name..">
+
+						    <label for="lname">Email</label>
+						    <input type="text" id="lname" name="Email" placeholder="Your last name..">
+
+						    <label for="subject">Subject</label>
+						    <textarea id="subject" name="Message" placeholder="Write something..." style="height:200px"></textarea>
+
+						    <input type="submit" name="Submit2" value="Submit">
+
+						  </form>
+						</div>
 					</div>
 					<div class="clear"></div>
 				</div>

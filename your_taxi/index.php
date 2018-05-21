@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include_once("add.php"); ?>
 <html lang="en">
 	<head>
 		<title>Home</title>
@@ -66,7 +67,7 @@
 									<li><a href="index_1.html">About</a></li>
 									<li><a href="index_2.html">Bus</a></li>
 									<li><a href="index_3.html">Services</a></li>
-									<li><a href="index_4.html">Contacts</a></li>
+									<li><a href="index_4.php">Contacts</a></li>
 								</ul>
 							</nav>
 							<div class="clear"></div>
@@ -108,7 +109,7 @@
 									<div class="color1">Terjangkau</div>
 								</div>
 							</div>
-							Harga tiket bus yang ditampilkan di BUSKITA adalah harga resmi dan terbaik, sudah termasuk biaya-biaya seperti pajak, handling fee dan lainnya llll
+							Harga tiket bus yang ditampilkan di BUSTIKET.COM adalah harga resmi dan terbaik, sudah termasuk biaya-biaya seperti pajak, handling fee dan lainnya
 							<a href="#" class="fa fa-share-square"></a>
 						</div>
 					</div>
@@ -154,7 +155,7 @@
 							<div class="clear"></div>
 							<strong>Time</strong>
 							<div class="tmInput">
-								<input name="Time" placeHolder="" type="text" data-constraints="@NotEmpty @Required">
+								<input name="Time" placeHolder="" type="time" data-constraints="@NotEmpty @Required">
 							</div>
 							<div class="clear"></div>
 							<strong>Date</strong>
@@ -193,9 +194,9 @@
 							</div>
 							<div class="clear"></div>
 							<div class="tmTextarea">
-								<textarea name="Message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+								<textarea name="Message" placeHolder="Message" data-constraints=''></textarea>
 							</div>
-							<a href="#" class="btn" data-type="submit">Submit</a>
+							<a href="#" class="btn" name="Submit" data-type="submit">Submit</a>
 						</form>
 					</div>
 					<div class="grid_6 prefix_1">
