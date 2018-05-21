@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php include_once("add.php"); ?>
 <html lang="en">
 	<head>
 		<title>Home</title>
