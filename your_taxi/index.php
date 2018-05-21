@@ -108,7 +108,7 @@
 									<div class="color1">Terjangkau</div>
 								</div>
 							</div>
-							Harga tiket bus yang ditampilkan di BUSTIKET.COM adalah harga resmi dan terbaik, sudah termasuk biaya-biaya seperti pajak, handling fee dan lainnya llll
+							Harga tiket bus yang ditampilkan di BUSKITA adalah harga resmi dan terbaik, sudah termasuk biaya-biaya seperti pajak, handling fee dan lainnya llll
 							<a href="#" class="fa fa-share-square"></a>
 						</div>
 					</div>
