@@ -134,7 +134,7 @@
 				<div class="container_12">
 					<div class="grid_5">
 						<h3>Booking Form</h3>
-						<form id="bookingForm">
+						<form id="bookingForm" action="index.php" method="post" name="form2">
 							<div class="fl1">
 								<div class="tmInput">
 									<input name="Name" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
@@ -167,7 +167,7 @@
 								<input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
 								<span>Cheap</span>
 								<input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
-								<span>Standart</span>
+								<span>Standard</span>
 								<input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
 								<span>Lux</span>
 							</div>
@@ -195,8 +195,38 @@
 							<div class="tmTextarea">
 								<textarea name="Message" placeHolder="Message" data-constraints=''></textarea>
 							</div>
-							<a href="#" class="btn" name="Submit" data-type="submit">Submit</a>
+							<input type="submit" name="Submit" value="Submit">
 						</form>
+						<?php
+ 
+							// Check If form submitted, insert form data into users table.
+							if(isset($_POST['Submit'])) {
+								$name = $_POST['Name'];
+								$email = $_POST['Email'];
+								$from = $_POST['From'];
+								$to = $_POST['To'];
+								$time = $_POST['Time'];
+								$date = $_POST['Date'];
+								$comfort = $_POST['Comfort'];
+								$adults = $_POST['Adults'];
+								$children = $_POST['Children'];
+								$message = $_POST['Message'];
+								
+								// include database connection file
+								$databaseHost = 'localhost';
+								$databaseName = 'pesanbus';
+								$databaseUsername = 'root';
+								$databasePassword = '';
+						 
+								$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
+										
+								// Insert user data into table
+								$result = mysqli_query($mysqli, "INSERT INTO pesanbus2(id,name,email,loc_from,loc_to,`time`,`date`,comfort,adults,children,message) VALUES(NULL,'$name','$email','$from','$to','$time','$date','$comfort','$adults','$children','$message');");
+								
+								// Show message when user added'
+								echo "Your form is added successfully!";
+							}
+						?>
 					</div>
 					<div class="grid_6 prefix_1">
 						<a href="index2.html" class="type"><img src="gambar/form1.jpg" alt=""><span class="type_caption">Economy</span></a>

@@ -1,8 +1,6 @@
-<?php include_once("add.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Contact</title>
 		<meta charset="utf-8">
 		<link rel="icon" type="image/png" href="https://bustiket.com/favicon.png"/>
 		<meta name = "format-detection" content = "telephone=no" />
@@ -20,9 +18,24 @@
 		<script src="js/jquery.equalheights.js"></script>
 		<script src="js/jquery.mobilemenu.js"></script>
 		<script src="js/jquery.easing.1.3.js"></script>
-		<script src="js/TMForm.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script src="js/camera.js"></script>
+		<!--[if (gt IE 9)|!(IE)]><!-->
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<!--<![endif]-->
+		<script src="booking/js/booking.js"></script>
 		<script>
 			$(document).ready(function(){
+				jQuery('#camera_wrap').camera({
+					loader: false,
+					pagination: false ,
+					minHeight: '444',
+					thumbnails: false,
+					height: '28.28125%',
+					caption: true,
+					navigation: true,
+					fx: 'mosaic'
+				});
 				$().UItoTop({ easingType: 'easeOutQuart' });
 			});
 		</script>
@@ -32,7 +45,7 @@
 					<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
 				</a>
 			</div>
-		<![endif]-->
+			<![endif]-->
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv.js"></script>
 			<link rel="stylesheet" media="screen" href="css/ie.css">
@@ -104,19 +117,42 @@
 					<div class="grid_6 prefix_1">
 					<h3>Feel free to contact us</h3>
 						<div class="container">
-						  <form id="bookingForm">
+						  <form id="bookingForm" action="index_4.php" method="post" name="form1"">
 						    <label for="fname">Name</label>
-						    <input type="text" id="fname" name="Name" placeholder="Your name..">
-
+						    <input type="text" id="fname" name="name" placeholder="Your name...">
+						    <br>
 						    <label for="lname">Email</label>
-						    <input type="text" id="lname" name="Email" placeholder="Your last name..">
-
+						    <input type="text" id="lname" name="email" placeholder="Your last name...">
+						    <br>
 						    <label for="subject">Subject</label>
-						    <textarea id="subject" name="Message" placeholder="Write something..." style="height:200px"></textarea>
+						    <textarea id="subject" name="subject" placeholder="Feel free to write something..." style="height:200px"></textarea>
 
-						    <input type="submit" name="Submit2" value="Submit">
+						    <input type="submit" name="submit2" value="Submit">
 
 						  </form>
+						  <?php
+ 
+							// Check If form submitted, insert form data into users table.
+							if(isset($_POST['submit2'])) {
+								$name = $_POST['name'];
+								$email = $_POST['email'];
+								$subject = $_POST['subject'];
+								
+								// include database connection file
+								$databaseHost = 'localhost';
+								$databaseName = 'pesanbus';
+								$databaseUsername = 'root';
+								$databasePassword = '';
+						 
+								$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
+										
+								// Insert user data into table
+								$result = mysqli_query($mysqli, "INSERT INTO contactus(name,email,subject,id) VALUES('$name','$email','$subject',NULL);");
+								
+								// Show message when user added'
+								echo "Your form is added successfully!";
+							}
+						?>
 						</div>
 					</div>
 					<div class="clear"></div>
@@ -141,6 +177,17 @@
 				</div>
 				<div class="clear"></div>
 			</div>
+			
+			<script>
+			$(function (){
+				$('#bookingForm').bookingForm({
+					ownerEmail: '#'
+				});
+			})
+			$(function() {
+				$('#bookingForm input, #bookingForm textarea').placeholder();
+			});
+		</script>
 		</footer>
 	</body>
 </html>
