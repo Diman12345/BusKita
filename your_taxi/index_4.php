@@ -85,7 +85,7 @@
 				<div class="clear"></div>
 			</header>
 <!--==============================Content=================================-->
-			<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - April 07, 2014!</div>
+			<div class="content"><div class="ic"></div>
 				<div class="container_12">
 					<div class="grid_12">
 						<h3>Find Us</h3>
@@ -98,34 +98,30 @@
 					<div class="grid_5">
 						<h3>Contact Info</h3>
 						<div class="map">
-							<div class="text1 color2">Lorem ipsum dolor sit amet, consecteturpiscinger elit um dolor sit amet, consecteturpiscing.</div>
-							<p>Don’t forget, 24/7 support is available for TemplateMonster’s <span class="color1"><a href="http://www.templatemonster.com/website-templates.php" rel="nofollow">premium themes</a></span> only. Free ones lack this privilege.</p>
-							<p>Use <span class="color1"><a href="http://www.templatetuning.com/" rel="nofollow">Template Tuning</a></span> services if you need any help in customization of your freebie.</p>
+							<div class="text1 color2">Hubungi Kami</div>
 							<address>
 								<dl>
-									<dt>The Company Name Inc. <br>
-										9870 St Vincent Place,<br>
-										Glasgow, DC 45 Fr 45.
+									<dt>BusKita Inc. <br>
+										Institut Pertanian Bogor<br>
 									</dt>
-									<dd><span>Telephone:</span> +1 800 603 6035</dd>
-									<dd><span>FAX:</span> +1 800 889 9898</dd>
-									<dd>E-mail: <a href="#" class="color1">mail@demolink.org</a></dd>
+									<dd><span>Telephone:</span>082312188225</dd>
+									<dd>E-mail: <a href="#" class="color1">Buskita@gmail.com</a></dd>
 								</dl>
 							</address>
 						</div>
 					</div>
 					<div class="grid_6 prefix_1">
-					<h3>Feel free to contact us</h3>
+					<h3>Kritik dan Saran </h3>
 						<div class="container">
 						  <form id="bookingForm" action="index_4.php" method="post" name="form1"">
-						    <label for="fname">Name</label>
+						    <label for="fname">Nama</label>
 						    <input type="text" id="fname" name="name" placeholder="Your name...">
 						    <br>
 						    <label for="lname">Email</label>
 						    <input type="text" id="lname" name="email" placeholder="Your last name...">
 						    <br>
-						    <label for="subject">Subject</label>
-						    <textarea id="subject" name="subject" placeholder="Feel free to write something..." style="height:200px"></textarea>
+						    <label for="subject">Kritik dan Saran</label>
+						    <textarea id="subject" name="subject" placeholder="write something..." style="height:200px"></textarea>
 
 						    <input type="submit" name="submit2" value="Submit">
 
@@ -163,15 +159,15 @@
 		<footer>
 			<div class="container_12">
 				<div class="grid_12">
-					<div class="f_phone"><span>Call Us:</span> + 1800 559 6580</div>
+					<div class="f_phone"><span>Call Us:</span> 082312188225</div>
 					<div class="socials">
-						<a href="#" class="fa fa-twitter"></a>
-						<a href="#" class="fa fa-facebook"></a>
-						<a href="#" class="fa fa-google-plus"></a>
+						<a href="https://twitter.com/BUSTIKET" class="fa fa-twitter"></a>
+						<a href="https://www.facebook.com/BUSTIKET/" class="fa fa-facebook"></a>
+						<a href="https://www.instagram.com/BUSTIKET/" class="fa fa-instagram"></a>
 					</div>
 					<div class="copy">
 						<div class="st1">
-						<div class="brand">Tour<span class="color1">T</span>axi </div>
+						<div class="brand">Bus<span class="color1">K</span>ita </div>
 						&copy; 2014	| <a href="#">Privacy Policy</a> </div> Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
 					</div>
 				</div>
