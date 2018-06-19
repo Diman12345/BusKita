@@ -229,13 +229,12 @@
 
 								// kirim email ke user
 								$to      = $email;
-                                $subject = 'the subject';
-                                $message = 'hello';
-                                $headers = 'From: Buskita1234@gmail.com' . "\r\n" .
-                                    'Reply-To: Buskita1234@gmail.com' . "\r\n" .
-                                    'X-Mailer: PHP/' . phpversion();
-
-                                mail($to, $subject, $message, $headers);
+                $subject = 'the subject';
+                $message = 'hello';
+                $headers = 'From: Buskita1234@gmail.com' . "\r\n" .
+                            'Reply-To: Buskita1234@gmail.com' . "\r\n" .
+                            'X-Mailer: PHP/' . phpversion();
+								mail($to, $subject, $message, $headers);
 
 							}
 						?>

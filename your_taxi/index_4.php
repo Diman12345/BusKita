@@ -127,24 +127,24 @@
 
 						  </form>
 						  <?php
- 
+
 							// Check If form submitted, insert form data into users table.
 							if(isset($_POST['submit2'])) {
 								$name = $_POST['name'];
 								$email = $_POST['email'];
 								$subject = $_POST['subject'];
-								
+
 								// include database connection file
 								$databaseHost = 'localhost';
-								$databaseName = 'pesanbus';
-								$databaseUsername = 'root';
-								$databasePassword = '';
-						 
-								$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
-										
+								$databaseName = 'id6021493_pesanbus';
+								$databaseUsername = 'id6021493_pesanbus';
+								$databasePassword = 'pesanbus';
+
+								$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
 								// Insert user data into table
 								$result = mysqli_query($mysqli, "INSERT INTO contactus(name,email,subject,id) VALUES('$name','$email','$subject',NULL);");
-								
+
 								// Show message when user added'
 								echo "Your form is added successfully!";
 							}
@@ -173,7 +173,7 @@
 				</div>
 				<div class="clear"></div>
 			</div>
-			
+
 			<script>
 			$(function (){
 				$('#bookingForm').bookingForm({
