@@ -65,7 +65,7 @@
 									<li><a href="index_1.html">About</a></li>
 									<li><a href="index_2.html">Bus</a></li>
 									<!-- <li><a href="index_3.html">Services</a></li> -->
-									<li class="current"><a href="index_4.html">Contacts</a></li>
+									<li class="current"><a href="index_4.php">Contacts</a></li>
 								</ul>
 							</nav>
 							<div class="clear"></div>
