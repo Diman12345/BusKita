@@ -66,7 +66,7 @@
 									<li><a href="index_1.html">About</a></li>
 									<li><a href="index_2.html">Bus</a></li>
 									<li><a href="index_3.html">Services</a></li>
-									<li><a href="index_4.html">Contacts</a></li>
+									<li><a href="index_4.php">Contacts</a></li>
 									<li><a href="index6.php">Login</a></li>
 								</ul>
 							</nav>
@@ -135,7 +135,7 @@
 				<div class="container_12">
 					<div class="grid_5">
 						<h3>Booking Form</h3>
-						<form id="bookingForm">
+						<form id="bookingForm" action="index.php" method="post" name="form2">
 							<div class="fl1">
 								<div class="tmInput">
 									<input name="Name" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
@@ -155,7 +155,7 @@
 							<div class="clear"></div>
 							<strong>Time</strong>
 							<div class="tmInput">
-								<input name="Time" placeHolder="" type="text" data-constraints="@NotEmpty @Required">
+								<input name="Time" placeHolder="" type="time" data-constraints="@NotEmpty @Required">
 							</div>
 							<div class="clear"></div>
 							<strong>Date</strong>
@@ -168,7 +168,7 @@
 								<input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
 								<span>Cheap</span>
 								<input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
-								<span>Standart</span>
+								<span>Standard</span>
 								<input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
 								<span>Lux</span>
 							</div>
@@ -194,10 +194,51 @@
 							</div>
 							<div class="clear"></div>
 							<div class="tmTextarea">
-								<textarea name="Message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+								<textarea name="Message" placeHolder="Message" data-constraints=''></textarea>
 							</div>
-							<a href="#" class="btn" data-type="submit">Submit</a>
+							<input type="submit" name="Submit" value="Submit">
 						</form>
+						<?php
+
+							// Check If form submitted, insert form data into users table.
+							if(isset($_POST['Submit'])) {
+								$name = $_POST['Name'];
+								$email = $_POST['Email'];
+								$from = $_POST['From'];
+								$to = $_POST['To'];
+								$time = $_POST['Time'];
+								$date = $_POST['Date'];
+								$comfort = $_POST['Comfort'];
+								$adults = $_POST['Adults'];
+								$children = $_POST['Children'];
+								$message = $_POST['Message'];
+
+								// include database connection file
+								$databaseHost = 'localhost';
+								$databaseName = 'id6021493_pesanbus';
+								$databaseUsername = 'id6021493_pesanbus';
+								$databasePassword = 'pesanbus';
+
+								$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
+								// Insert user data into table
+								$result = mysqli_query($mysqli, "INSERT INTO pesanbus2(id,name,email,loc_from,loc_to,`time`,`date`,comfort,adults,children,message) VALUES(NULL,'$name','$email','$from','$to','$time','$date','$comfort','$adults','$children','$message');");
+
+								// Show message when user added'
+								echo "Terima Kasih";
+
+								// kirim email ke user
+								$to      = $email;
+                                $subject = 'the subject';
+                                $message = 'hello';
+                                $headers = 'From: Buskita1234@gmail.com' . "\r\n" .
+                                    'Reply-To: Buskita1234@gmail.com' . "\r\n" .
+                                    'X-Mailer: PHP/' . phpversion();
+
+                                mail($to, $subject, $message, $headers);
+
+							}
+						?>
 					</div>
 					<div class="grid_6 prefix_1">
 						<a href="index2.html" class="type"><img src="gambar/form1.jpg" alt=""><span class="type_caption">Economy</span></a>
@@ -212,15 +253,15 @@
 		<footer>
 			<div class="container_12">
 				<div class="grid_12">
-					<div class="f_phone"><span>Call Us:</span> + 1800 559 6580</div>
+					<div class="f_phone"><span>Call Us:</span> 082312188225</div>
 					<div class="socials">
-						<a href="#" class="fa fa-twitter"></a>
-						<a href="#" class="fa fa-facebook"></a>
-						<a href="#" class="fa fa-google-plus"></a>
+						<a href="https://twitter.com/BUSTIKET" class="fa fa-twitter"></a>
+						<a href="https://www.facebook.com/BUSTIKET/" class="fa fa-facebook"></a>
+						<a href="https://www.instagram.com/BUSTIKET/" class="fa fa-instagram"></a>
 					</div>
 					<div class="copy">
 						<div class="st1">
-						<div class="brand">Tour<span class="color1">T</span>axi </div>
+						<div class="brand">Bus<span class="color1">K</span>ita </div>
 						&copy; 2014	| <a href="#">Privacy Policy</a> </div> Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
 					</div>
 				</div>
