@@ -90,7 +90,7 @@
 					<div class="banner">
 						<div class="maxheight">
 							<div class="banner_title">
-								<img src="images/icon1.png" alt="">
+								<img src="images/images1.png" alt="">
 								<div class="extra_wrapper">Cepat&amp;
 									<div class="color1">Nyaman</div>
 								</div>
@@ -104,7 +104,7 @@
 					<div class="banner">
 						<div class="maxheight">
 							<div class="banner_title">
-								<img src="images/icon2.png" alt="">
+								<img src="images/images2.png" alt="">
 								<div class="extra_wrapper">Harga
 									<div class="color1">Terjangkau</div>
 								</div>
@@ -117,7 +117,7 @@
 					<div class="banner">
 						<div class="maxheight">
 							<div class="banner_title">
-								<img src="images/icon3.png" alt="">
+								<img src="images/images3.png" alt="">
 								<div class="extra_wrapper">Transaksi
 									<div class="color1">Terjamin</div>
 								</div>

@@ -73,32 +73,21 @@
 						<div class="clear"></div>
 					</div>
 				</div>
-				<div class="container_12">
-					<div class="grid_12">
-						<h1>
-							<a href="index.html">
-								<img src="images/logo.png" alt="Your Happy Family">
-							</a>
-						</h1>
-					</div>
-				</div>
 				<div class="clear"></div>
 			</header>
 <!--==============================Content=================================-->
 			<div class="content"><div class="ic"></div>
 				<div class="container_12">
 					<div class="grid_12">
-						<h3>Find Us</h3>
+						<h3>Temukan Rute Perjalanan Anda</h3>
 						<div class="map">
-							<figure>
-								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24214.807650104907!2d-73.94846048422478!3d40.65521573400813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1395650655094" style="border:0"></iframe>
-							</figure>
+							<div style="width: 100%"><iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=kampus%20ipb%20dramaga+(Institut%20Pertanian%20Bogor)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Create Google Map</a></iframe></div><br />
 						</div>
 					</div>
 					<div class="grid_5">
-						<h3>Contact Info</h3>
+						<h3>Hubungi Kami</h3>
 						<div class="map">
-							<div class="text1 color2">Hubungi Kami</div>
+							
 							<address>
 								<dl>
 									<dt>BusKita Inc. <br>
@@ -115,13 +104,13 @@
 						<div class="container">
 						  <form id="bookingForm" action="index_4.php" method="post" name="form1"">
 						    <label for="fname">Nama</label>
-						    <input type="text" id="fname" name="name" placeholder="Your name...">
+						    <input type="text" id="fname" name="name" placeholder=" ">
 						    <br>
 						    <label for="lname">Email</label>
-						    <input type="text" id="lname" name="email" placeholder="Your last name...">
+						    <input type="text" id="lname" name="email" placeholder=" ">
 						    <br>
 						    <label for="subject">Kritik dan Saran</label>
-						    <textarea id="subject" name="subject" placeholder="write something..." style="height:200px"></textarea>
+						    <textarea id="subject" name="subject" placeholder=" " style="height:200px"></textarea>
 
 						    <input type="submit" name="submit2" value="Submit">
 
