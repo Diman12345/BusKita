@@ -65,7 +65,7 @@
 									<li class="current"><a href="index.php">Home</a></li>
 									<li><a href="index_1.html">About</a></li>
 									<li><a href="index_2.html">Bus</a></li>
-									<!-- <li><a href="index_3.html">Services</a></li> -->
+									<li><a href="index_3.html">Services</a></li>
 									<li><a href="index_4.php">Contacts</a></li>
 									<li><a href="index6.php">Login</a></li>
 								</ul>
@@ -136,18 +136,18 @@
 						<form id="bookingForm" action="index.php" method="post" name="form2">
 							<div class="fl1">
 								<div class="tmInput">
-									<input name="Name" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+									<input name="Name" placeHolder="Nama :" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
 								</div>
 								<div class="tmInput">
-									<input name="From" placeHolder="From:" type="text" data-constraints="@NotEmpty @Required ">
+									<input name="From" placeHolder="Berangkat" type="text" data-constraints="@NotEmpty @Required ">
 								</div>
 							</div>
 							<div class="fl1">
 								<div class="tmInput">
-									<input name="Email" placeHolder="Email:" type="text" data-constraints="@NotEmpty @Required @Email">
+									<input name="Email" placeHolder="Email :" type="text" data-constraints="@NotEmpty @Required @Email">
 								</div>
 								<div class="tmInput mr0">
-									<input name="To" placeHolder="To:" type="text" data-constraints="@NotEmpty @Required">
+									<input name="To" placeHolder="Tujuan" type="text" data-constraints="@NotEmpty @Required">
 								</div>
 							</div>
 							<div class="clear"></div>
@@ -192,9 +192,10 @@
 							</div>
 							<div class="clear"></div>
 							<div class="tmTextarea">
-								<textarea name="Message" placeHolder="Message" data-constraints=''></textarea>
+								<p>Catatan</p>
+								<textarea name="Message" placeHolder=" " data-constraints=''></textarea>
 							</div>
-							<input type="submit" name="Submit" value="Submit">
+							<input type="submit" name="Submit" value="Pesan">
 						</form>
 						<?php
 

@@ -725,6 +725,11 @@ header {
    padding-top: 10px;
 }
 
+.tmTextarea p {
+   padding-left: 0;
+   padding-top: 10px;
+}
+
 .tmRadio {
     margin-left: 0 !important;
 }
