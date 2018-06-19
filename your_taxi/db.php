@@ -3,11 +3,11 @@
 $host  = 'localhost';
 $user  = 'root';
 $pass = '';
-$db    = 'db_login';
+$db    = 'pesanbus';
 
 $connect = new mysqli($host, $user, $pass, $db);
 if($connect->connect_error){
  echo 'Terjadi Kesalahan';
 }
 
-?> 
+?>

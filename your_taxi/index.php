@@ -65,7 +65,7 @@
 									<li class="current"><a href="index.php">Home</a></li>
 									<li><a href="index_1.html">About</a></li>
 									<li><a href="index_2.html">Bus</a></li>
-									<li><a href="index_3.html">Services</a></li>
+									<!-- <li><a href="index_3.html">Services</a></li> -->
 									<li><a href="index_4.php">Contacts</a></li>
 									<li><a href="index6.php">Login</a></li>
 								</ul>
@@ -95,8 +95,8 @@
 									<div class="color1">Nyaman</div>
 								</div>
 							</div>
-							Mencari dan membandingkan berbagai jenis bus Antar Kota Antar Provinsi di seluruh Indonesia mulai dari segi harga, rute, lama perjalanan, fasilitas dan lainnya dengan teknologi algoritma search terbaru.
-							<a href="#" class="fa fa-share-square"></a>
+							<p>Mencari dan membandingkan berbagai jenis bus Antar Kota Antar Provinsi di seluruh Indonesia mulai dari segi harga, rute, lama perjalanan, fasilitas dan lainnya dengan teknologi algoritma search terbaru.</p>
+
 						</div>
 					</div>
 				</div>
@@ -109,8 +109,7 @@
 									<div class="color1">Terjangkau</div>
 								</div>
 							</div>
-							Harga tiket bus yang ditampilkan di BUSTIKET.COM adalah harga resmi dan terbaik, sudah termasuk biaya-biaya seperti pajak, handling fee dan lainnya
-							<a href="#" class="fa fa-share-square"></a>
+							<p>Harga tiket bus yang ditampilkan di BUSTIKET.COM adalah harga resmi dan terbaik, sudah termasuk biaya-biaya seperti pajak, handling fee dan lainnya</p>
 						</div>
 					</div>
 				</div>
@@ -123,8 +122,7 @@
 									<div class="color1">Terjamin</div>
 								</div>
 							</div>
-							Teknologi SSL dari RapidSSL dengan Sertifikat yang terotentikasi menjamin privasi dan keamanan transaksi online Anda. Konfirmasi instan dan e-tiket dikirm ke email Anda.
-							<a href="#" class="fa fa-share-square"></a>
+							<p>Teknologi SSL dari RapidSSL dengan Sertifikat yang terotentikasi menjamin privasi dan keamanan transaksi online Anda. Konfirmasi instan dan e-tiket dikirm ke email Anda.</p>
 						</div>
 					</div>
 				</div>
@@ -215,9 +213,9 @@
 
 								// include database connection file
 								$databaseHost = 'localhost';
-								$databaseName = 'id6021493_pesanbus';
-								$databaseUsername = 'id6021493_pesanbus';
-								$databasePassword = 'pesanbus';
+								$databaseName = 'pesanbus';
+								$databaseUsername = 'root';
+								$databasePassword = '';
 
 								$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
@@ -240,9 +238,9 @@
 						?>
 					</div>
 					<div class="grid_6 prefix_1">
-						<a href="index2.html" class="type"><img src="gambar/form1.jpg" alt=""><span class="type_caption">Economy</span></a>
-						<a href="index2.html" class="type"><img src="gambar/form2.jpg" alt=""><span class="type_caption">Standard</span></a>
-						<a href="index2.html" class="type"><img src="gambar/form3.jpg" alt=""><span class="type_caption">Lux</span></a>
+						<a href="gambar/form1.jpg" class="type"><img src="gambar/form1.jpg" alt=""><span class="type_caption">Economy</span></a>
+						<a href="gambar/form2.jpg" class="type"><img src="gambar/form2.jpg" alt=""><span class="type_caption">Standard</span></a>
+						<a href="gambar/form3.jpg" class="type"><img src="gambar/form3.jpg" alt=""><span class="type_caption">Lux</span></a>
 					</div>
 					<div class="clear"></div>
 				</div>
