@@ -4,6 +4,15 @@
 /*end custom mixins */
 /* Control Holder */
 
+.harga {
+  font-weight:bold;
+  margin: auto;
+}
+
+.nilai {
+  font-color:red;
+}
+
 #bookingForm {
   padding-right: 36px;
   font-family: 'Open Sans', sans-serif;
@@ -84,11 +93,10 @@
   box-sizing: border-box;
 
   border: 1px solid #f1f1f1;
-  color: #737272;
-  background: #f0f3f5;
   padding: 5px 12px;
   width: 100%;
   font: 14px/20px 'Open Sans', sans-serif;
+  font-weight:bold;
   height: 30px;
  
 }
@@ -121,7 +129,6 @@ textarea::-moz-placeholder
 
 #bookingForm input:focus,
 #bookingForm textarea:focus {
-  background: #fff;
 }
 
 #bookingForm a.btn {

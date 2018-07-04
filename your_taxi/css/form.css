@@ -136,7 +136,7 @@
 	padding-top: 28px;
 }
 
-.btns a.btn {
+.btns input.btn {
 	margin: 0;
 	padding-left: 0;
 	padding-right: 0;
@@ -146,7 +146,7 @@
 	
 }
 
-.btns a.btn+a.btn {
+.btns input.btn+input.btn {
 	margin-left: 8px;
 }
 

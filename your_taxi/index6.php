@@ -37,41 +37,61 @@
 			<link rel="stylesheet" media="screen" href="css/ie.css">
 		<![endif]-->
 		<style>
+   footer {
+   	background-color:#555;
+   }
+  .daftar{
+  	padding-right:2%;
+  	padding-left:2%;
+  }
   .form {
-   margin: 10% 0 0 25%;
+  	border-radius: 25px;
    float: center;
+   text-align:center;
+   padding: 5%;
+   padding-bottom:10%;
+   margin: auto;
+   margin-bottom: 5%;
    width: 30%;
+   border: 4px solid #555;
   }
   .input {
    padding: 1%;
    color: #777777;
-   font-size: 14pt;
-   float: left;
-   width: 80%;
-   margin-bottom: 1%;
+   font-size: 12pt;
+   float: center;
+   width: 70%;
+   margin:auto;
   }
   .submit {
-   padding: 1%;
+   padding: 1.5%;
    color: #fff;
    background-color: #FFA500;
+   transition: color 0.5s;
+   -webkit-transition: color 0.5s; /* Safari 3.1 to 6.0 */
+   transition: background-color 0.5s;
+   -webkit-transition: background-color 0.5s; /* Safari 3.1 to 6.0 */
    font-size: 14pt;
-   font-family: Times New Roman;
-   float: left;
+   font-family: 'Open Sans';
    width: 20%;
-   align: center;
+   margin: auto;
+   border: none;
+
+  }
+  .submit:hover {
+   color: #ff9933;
+   background-color:#FFF;
   }
   .welcome {
    color: #000;
    font-size: 20pt;
    font-weight: 900;
-   align: center;
    font-family: 'Open Sans', sans-serif;
   }
-
-
   </style>
 	</head>
-	<body class="page1" id="top">
+
+	<body class="page1" id="top" >
 		<div class="main">
 <!--==============================header=================================-->
 <header>
@@ -98,41 +118,50 @@
 	<div class="clear"></div>
 </header>
 
-<body>
-
 <div class="form">
-<span class="welcome">Selamat Datang di BusKita</span>
-<br><br>
- <form action="login.php" method="post">
-  <input class="input" type="text" name="username" placeholder="Username"><br>
-  <br><br>
-  <input class="input" type="password" name="password" placeholder="Password"><br>
-  <br><br>
-  <input class="submit" type="submit" value="Login" name="login">
-<br><br>
-<b> Belum Punya Akun?</b> <br> <a href="register.php" class="submit">Daftar!</a>
-</form>
+	<span class="welcome">Selamat Datang di BusKita!</span>
+	<br><br><br>
+ 	<form action="login.php" method="post">
+  		<input class="input" type="text" name="username" placeholder="Username">
+  		<br><br>
+  		<input class="input" type="password" name="password" placeholder="Password">
+  		<br><br>
+  		<input class="submit" type="submit" value="Login" name="login">
+		<br><br><br>
+		<b> Belum Punya Akun?</b> <br><br><a href="register.php" class="submit">Daftar!</a>
+	</form>
 </div>
+<div class="clear">
 
-</body>
-<footer>
+<!--==============================footer=================================-->
+		<footer>
 			<div class="container_12">
 				<div class="grid_12">
-					<div class="f_phone"><span>Call Us:</span> + 1800 559 6580</div>
+					<div class="f_phone"><span>Call Us:</span> 082312188225</div>
 					<div class="socials">
-						<a href="#" class="fa fa-twitter"></a>
-						<a href="#" class="fa fa-facebook"></a>
-						<a href="#" class="fa fa-google-plus"></a>
+						<a href="https://twitter.com/BUSTIKET" class="fa fa-twitter"></a>
+						<a href="https://www.facebook.com/BUSTIKET/" class="fa fa-facebook"></a>
+						<a href="https://www.instagram.com/BUSTIKET/" class="fa fa-instagram"></a>
 					</div>
 					<div class="copy">
 						<div class="st1">
-						<div class="brand">Tour<span class="color1">T</span>axi </div>
+						<div class="brand">Bus<span class="color1">K</span>ita </div>
 						&copy; 2014	| <a href="#">Privacy Policy</a> </div> Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
 					</div>
 				</div>
 				<div class="clear"></div>
 			</div>
+			
+			<script>
+			$(function (){
+				$('#bookingForm').bookingForm({
+					ownerEmail: '#'
+				});
+			})
+			$(function() {
+				$('#bookingForm input, #bookingForm textarea').placeholder();
+			});
+			</script>
 		</footer>
 	</body>
 </html>
-</html> 

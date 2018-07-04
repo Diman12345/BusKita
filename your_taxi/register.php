@@ -38,34 +38,55 @@
 		<![endif]-->
 		
 		<style>
+   footer {
+   	background-color:#555;
+   }
+  .daftar{
+  	padding-right:2%;
+  	padding-left:2%;
+  }
   .form {
-   margin: 10% 0 0 25%;
+  	border-radius: 25px;
    float: center;
+   text-align:center;
+   padding: 5%;
+   padding-bottom:10%;
+   margin: auto;
+   margin-bottom: 5%;
    width: 30%;
+   border: 4px solid #555;
   }
   .input {
    padding: 1%;
    color: #777777;
-   font-size: 14pt;
-   float: left;
-   width: 80%;
-   margin-bottom: 1%;
+   font-size: 12pt;
+   float: center;
+   width: 70%;
+   margin:auto;
   }
   .submit {
-   padding: 1%;
+   padding: 1.5%;
    color: #fff;
    background-color: #FFA500;
+   transition: color 0.5s;
+   -webkit-transition: color 0.5s; /* Safari 3.1 to 6.0 */
+   transition: background-color 0.5s;
+   -webkit-transition: background-color 0.5s; /* Safari 3.1 to 6.0 */
    font-size: 14pt;
-   font-family: Times New Roman;
-   float: left;
+   font-family: 'Open Sans';
    width: 20%;
-   align: center;
+   margin: auto;
+   border: none;
+
+  }
+  .submit:hover {
+   color: #ff9933;
+   background-color:#FFF;
   }
   .welcome {
    color: #000;
    font-size: 20pt;
    font-weight: 900;
-   align: center;
    font-family: 'Open Sans', sans-serif;
   }
 
@@ -156,7 +177,7 @@ if (@$_POST['simpan']) {
 ?>
 
 <script type="text/javascript">
-  alert("SIMPAN berhasil");
+  alert("PENDAFTARAN berhasil!");
   window.location.href="index6.php"
 
 </script>

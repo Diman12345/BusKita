@@ -51,6 +51,7 @@
 			<script src="js/html5shiv.js"></script>
 			<link rel="stylesheet" media="screen" href="css/ie.css">
 		<![endif]-->
+
 	</head>
 	<body class="page1" id="top">
 		<div class="main">
@@ -133,7 +134,7 @@
 				<div class="container_12">
 					<div class="grid_5">
 						<h3>Booking Form</h3>
-						<form id="bookingForm" action="index.php" method="post" name="form2">
+						<form id="bookingForm" action="" method="post" name="form2">
 							<div class="fl1">
 								<div class="tmInput">
 									<input name="Name" placeHolder="Nama :" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
@@ -146,8 +147,8 @@
 								<div class="tmInput">
 									<input name="Email" placeHolder="Email :" type="text" data-constraints="@NotEmpty @Required @Email">
 								</div>
-								<div class="tmInput mr0">
-									<input name="To" placeHolder="Tujuan" type="text" data-constraints="@NotEmpty @Required">
+								<div class="tmInput">
+									<input name="To" placeHolder="Tujuan" type="text" data-constraints="@NotEmpty @Required ">
 								</div>
 							</div>
 							<div class="clear"></div>
@@ -163,11 +164,11 @@
 							<div class="clear"></div>
 							<div class="tmRadio">
 								<p>Comfort</p>
-								<input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
+								<input name="Comfort" type="radio" id="tmRadio0" value="Cheap" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
 								<span>Cheap</span>
-								<input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+								<input name="Comfort" type="radio" id="tmRadio1" value="Standard" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
 								<span>Standard</span>
-								<input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+								<input name="Comfort" type="radio" id="tmRadio2" value="Lux"data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
 								<span>Lux</span>
 							</div>
 							<div class="clear"></div>
@@ -195,46 +196,49 @@
 								<p>Catatan</p>
 								<textarea name="Message" placeHolder=" " data-constraints=''></textarea>
 							</div>
-							<input type="submit" name="Submit" value="Pesan">
+							<input class="btn" input type="submit" name="Submit" value="Pesan">
 						</form>
 						<?php
 
 							// Check If form submitted, insert form data into users table.
-							if(isset($_POST['Submit'])) {
-								$name = $_POST['Name'];
-								$email = $_POST['Email'];
-								$from = $_POST['From'];
-								$to = $_POST['To'];
-								$time = $_POST['Time'];
-								$date = $_POST['Date'];
-								$comfort = $_POST['Comfort'];
-								$adults = $_POST['Adults'];
-								$children = $_POST['Children'];
-								$message = $_POST['Message'];
-
+							if(@$_POST['Submit']) {
+								$name = @$_POST['Name'];
+								$email = @$_POST['Email'];
+								$from = @$_POST['From'];
+								$to = @$_POST['To'];
+								$time = @$_POST['Time'];
+								$date = @$_POST['Date'];
+								$comfort = @$_POST['Comfort'];
+								$adults = @$_POST['Adults'];
+								$children = @$_POST['Children'];
+								$message = @$_POST['Message'];
 								// include database connection file
 								$databaseHost = 'localhost';
 								$databaseName = 'pesanbus';
 								$databaseUsername = 'root';
 								$databasePassword = '';
-
 								$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-
 								// Insert user data into table
 								$result = mysqli_query($mysqli, "INSERT INTO pesanbus2(id,name,email,loc_from,loc_to,`time`,`date`,comfort,adults,children,message) VALUES(NULL,'$name','$email','$from','$to','$time','$date','$comfort','$adults','$children','$message');");
-
 								// Show message when user added'
-								echo "Terima Kasih";
+								?>
 
+								<script type="text/javascript">
+								  alert("PEMESANAN berhasil!");
+								  window.location.href="index.php"
+
+								</script>
+
+								<?php 
 								// kirim email ke user
 								$to      = $email;
-                $subject = 'the subject';
-                $message = 'hello';
-                $headers = 'From: Buskita1234@gmail.com' . "\r\n" .
-                            'Reply-To: Buskita1234@gmail.com' . "\r\n" .
-                            'X-Mailer: PHP/' . phpversion();
+                				$subject = 'the subject';
+                				$message = 'hello';
+                				$headers = 'From: Buskita1234@gmail.com' . "\r\n" .
+                            	'Reply-To: Buskita1234@gmail.com' . "\r\n" .
+                            	'X-Mailer: PHP/' . phpversion();
 								mail($to, $subject, $message, $headers);
-
+							
 							}
 						?>
 					</div>
